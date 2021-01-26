@@ -25,7 +25,7 @@
             <script>
                 var testlist = ["test",
                     "test2",
-                    "test3"
+                    "test4"
                 ];
                 var i;
                 for (i = 0; i < 3; i++) {
@@ -40,13 +40,16 @@
                 // var file = localStorage.getItem("data.json");
                 // var file = require('./data.json');
                 // console.log(file);
-
-
+                
+                var data;
                 fetch("./data.json")
                     .then(response => {
                         return response.json();
                     })
                     .then(data => console.log(data));
+
+                    console.log(data[1].name);
+
 
                 // var softwarelist = JSON.parse(file);
 
