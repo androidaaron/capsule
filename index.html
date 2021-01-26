@@ -31,7 +31,40 @@
                 for (i = 0; i < 3; i++) {
                     document.write("<p>" + testlist[i] + "</p>");
                 }
+
             </script>
+
+            <script>
+
+                // Retrieving data:
+                // var file = localStorage.getItem("data.json");
+                // var file = require('./data.json');
+                // console.log(file);
+
+
+                fetch("./data.json")
+                    .then(response => {
+                        return response.json();
+                    })
+                    .then(data => console.log(data));
+
+                // var softwarelist = JSON.parse(file);
+
+                // // var softwarelist = [];
+
+                // for (i = 0; i < softwarelist.length; i++) {
+                //     // document.write("<p>" + softwarelist[i].name + "</p>");
+                //     document.write(softwarelist[i].name);
+                // }
+
+                // document.write("<p>" + file.["software"] + "</p>");
+
+                // document.write("<p>" + "this is a test" + "</p>");
+
+                // file = localStorage.getItem("softwarelist.json");
+                // var obj = JSON.parse(file);
+            </script>
+
 
         </section>
 
